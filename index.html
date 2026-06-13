@@ -3,280 +3,831 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Bakery Website</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Maison Lev0n | Artisan Bakery &amp; Patisserie</title>
+    <meta name="description"
+        content="Maison Lev0n — premium artisan bakery offering slow-fermented bread, hand-laminated pastries, and seasonal patisserie. Freshly baked every morning since 1987.">
+    <meta name="author" content="Maison Lev0n">
+    <link rel="canonical" href="https://ahmedalmadhji.github.io/Bakery-Website/">
 
-    <!-- Render All Element Normally -->
-    <link rel="stylesheet" href="css/Normlazi.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="favicon.svg" sizes="any">
+    <link rel="apple-touch-icon" href="favicon.svg">
 
-    <!-- Link for FontAwesome  -->
-    <link rel="stylesheet" href="css/all.min.css">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Maison Lev0n | Artisan Bakery &amp; Patisserie">
+    <meta property="og:description"
+        content="Slow-fermented bread, hand-laminated pastries, and seasonal patisserie — made in small batches before dawn.">
+    <meta property="og:image" content="https://ahmedalmadhji.github.io/Bakery-Website/images/hero.jpg">
+    <meta property="og:url" content="https://ahmedalmadhji.github.io/Bakery-Website/">
 
-    <!-- Main Template Css File -->
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Maison Lev0n | Artisan Bakery &amp; Patisserie">
+    <meta name="twitter:description"
+        content="Crafted with tradition. Served with passion. Freshly baked every morning.">
 
-    <!-- Link of Open Sans font-family from Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap"
         rel="stylesheet">
-    <!-- <script src='main.js'></script> -->
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Bakery",
+        "name": "Maison Lev0n",
+        "description": "Premium artisan bakery offering slow-fermented bread and hand-laminated pastries.",
+        "url": "https://ahmedalmadhji.github.io/Bakery-Website/",
+        "telephone": "+967-773-069-358",
+        "openingHours": "Mo-Fr 06:00-20:00, Sa-Su 07:00-21:00",
+        "servesCuisine": "French, Artisan Bakery"
+    }
+    </script>
 </head>
 
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-    <!-- header -->
+    <header class="site-header" id="site-header">
+        <div class="container site-header__inner">
+            <a href="#hero" class="site-logo" aria-label="Maison Lev0n — Home">
+                <span class="site-logo__mark" aria-hidden="true">ML</span>
+                <span class="site-logo__text">Maison Lev<span class="site-logo__accent">0</span>n</span>
+            </a>
 
-    <header>
-        <div class="container">
-
-            <a href="#" class="logo"> <i class="fas fa-bread-slice"></i> bakery </a>
-
-            <nav class="links">
-                <i class="fas fa-bars toggle-menu"></i>
-                
-                <ul class="navbar">
-                    <li><a href="#home">home</a></li>
-                    <li><a href="#about">about</a></li>
-                    <li><a href="#product">product</a></li>
-                    <li><a href="#review">review</a></li>
-                    <li><a href="#order">order</a></li>
+            <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+                <ul class="site-nav__list" id="site-nav-list">
+                    <li><a href="#featured" class="site-nav__link" data-nav="featured">Menu</a></li>
+                    <li><a href="#about" class="site-nav__link" data-nav="about">Our Story</a></li>
+                    <li><a href="#collection" class="site-nav__link" data-nav="collection">Collection</a></li>
+                    <li><a href="#process" class="site-nav__link" data-nav="process">Process</a></li>
+                    <li><a href="#reviews" class="site-nav__link" data-nav="reviews">Reviews</a></li>
+                    <li><a href="#order" class="site-nav__link site-nav__link--cta" data-nav="order">Order</a></li>
                 </ul>
             </nav>
+
+            <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false"
+                aria-controls="site-nav-list" aria-label="Open navigation menu">
+                <span class="menu-toggle__bar"></span>
+                <span class="menu-toggle__bar"></span>
+                <span class="menu-toggle__bar"></span>
+            </button>
         </div>
     </header>
 
-    <!-- header end -->
+    <main id="main-content">
+        <!-- Hero -->
+        <section class="hero" id="hero" aria-labelledby="hero-heading">
+            <div class="hero__media">
+                <img src="images/hero.jpg"
+                    alt="Fresh artisan croissants and bread on a wooden board in warm morning light" width="1600"
+                    height="1200" fetchpriority="high">
+            </div>
+            <div class="hero__overlay" aria-hidden="true"></div>
+            <div class="container hero__content">
+                <p class="hero__eyebrow reveal">Est. 1987 · European Artisan Bakery</p>
+                <h1 class="hero__title reveal" id="hero-heading">Freshly Baked<br>Every Morning</h1>
+                <p class="hero__subtitle reveal">Crafted with tradition. Served with passion. Slow-fermented bread,
+                    hand-laminated pastries, and seasonal patisserie — made in small batches before dawn.</p>
+                <div class="hero__actions reveal">
+                    <a href="#collection" class="btn btn--primary">Explore the Collection</a>
+                    <a href="#order" class="btn btn--outline">Reserve for Pickup</a>
+                </div>
+                <dl class="hero__stats reveal">
+                    <div class="hero__stat">
+                        <dt>38+</dt>
+                        <dd>Years of craft</dd>
+                    </div>
+                    <div class="hero__stat">
+                        <dt>4:30 AM</dt>
+                        <dd>Daily bake start</dd>
+                    </div>
+                    <div class="hero__stat">
+                        <dt>100%</dt>
+                        <dd>Natural ingredients</dd>
+                    </div>
+                    <div class="hero__stat">
+                        <dt>2,400+</dt>
+                        <dd>Weekly customers</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
 
-    <main>
-        <!-- home -->
-        <section class="home" id="home">
-            <div class="slide">
-                <div class="content">
-                    <h3>we bake the world a better place</h3>
-                    <a href="#product" class="btn"> get started </a>
+        <!-- Featured Products -->
+        <section class="featured section" id="featured" aria-labelledby="featured-heading">
+            <div class="container">
+                <header class="section-header reveal">
+                    <p class="section-eyebrow">Today's Selection</p>
+                    <h2 class="section-title" id="featured-heading">Featured Creations</h2>
+                    <p class="section-desc">Handpicked favorites from this morning's bake — limited quantities, gone by
+                        afternoon.</p>
+                </header>
+                <div class="featured-grid">
+                    <article class="featured-card featured-card--large reveal">
+                        <div class="featured-card__image">
+                            <img src="images/croissant.jpg" alt="Golden butter croissant with flaky layers" width="800"
+                                height="900" loading="lazy">
+                        </div>
+                        <div class="featured-card__body">
+                            <span class="badge">Best Seller</span>
+                            <h3 class="featured-card__title">Classic Butter Croissant</h3>
+                            <p class="featured-card__desc">Twenty-seven layers of French butter, baked until
+                                shatteringly
+                                crisp outside and cloud-soft within.</p>
+                            <p class="featured-card__price">$4.50</p>
+                        </div>
+                    </article>
+                    <article class="featured-card reveal">
+                        <div class="featured-card__image">
+                            <img src="images/sourdough.jpg" alt="Rustic country sourdough loaf with golden crust"
+                                width="600" height="500" loading="lazy">
+                        </div>
+                        <div class="featured-card__body">
+                            <h3 class="featured-card__title">Country Sourdough</h3>
+                            <p class="featured-card__desc">48-hour natural fermentation. Deep crust, open crumb, pure
+                                flavor.</p>
+                            <p class="featured-card__price">$8.00</p>
+                        </div>
+                    </article>
+                    <article class="featured-card reveal">
+                        <div class="featured-card__image">
+                            <img src="images/pain-au-chocolat.jpg" alt="Salted caramel éclair with glossy glaze"
+                                width="600" height="500" loading="lazy">
+                        </div>
+                        <div class="featured-card__body">
+                            <h3 class="featured-card__title">Salted Caramel Éclair</h3>
+                            <p class="featured-card__desc">Choux pastry, Madagascar vanilla crème, caramel with fleur de
+                                sel.</p>
+                            <p class="featured-card__price">$6.25</p>
+                        </div>
+                    </article>
+                    <article class="featured-card reveal">
+                        <div class="featured-card__image">
+                            <img src="images/berry-tart.jpg" alt="Seasonal berry tart with fresh strawberries"
+                                width="600" height="500" loading="lazy">
+                        </div>
+                        <div class="featured-card__body">
+                            <span class="badge badge--seasonal">Seasonal</span>
+                            <h3 class="featured-card__title">Berry Tart</h3>
+                            <p class="featured-card__desc">Vanilla pastry cream, seasonal berries, apricot glaze.</p>
+                            <p class="featured-card__price">$7.50</p>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
-        <!-- home section ends -->
-        <!-- about us -->
-        <section class="about" id="about">
-            <h1 class="heading"> <span>about</span> us </h1>
-            <div class="row">
-                <div class="image">
-                    <img src="images/about.png" alt="">
-                </div>
-                <div class="content">
-                    <h3>good things come to those <span>who bake </span> for others</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit veritatis sunt id modi quis in
-                        eveniet
-                        at! Vero iusto excepturi.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam molestiae maxime quibusdam rem
-                        necessitatibus optio maiores fugiat. Pariatur molestiae.</p>
-                    <a href="#" class="btn">read more</a>
-                </div>
-            </div>
-        </section>
-        <!-- about us end-->
-        <!-- product -->
-        <section class="product" id="product">
-            <h1 class="heading">our <span> products</span></h1>
-            <div class="box-container">
-                <div class="box">
-                    <div class="image">
-                        <img src="images/product-1.jpg" alt="">
-                    </div>
-                    <div class="content">
-                        <h3>chocolate pie</h3>
-                        <span class="price">$15.99</span>
-                        <a href="#" class="btn">add to cart</a>
+
+        <!-- About -->
+        <section class="about section section--alt" id="about" aria-labelledby="about-heading">
+            <div class="container about__grid">
+                <div class="about__media reveal">
+                    <img src="images/about.png"
+                        alt="Male artisan chef preparing fresh ingredients in a professional kitchen" width="900"
+                        height="1100" loading="lazy">
+                    <div class="about__badge">
+                        <span class="about__badge-number">1987</span>
+                        <span class="about__badge-text">Founded in Lyon</span>
                     </div>
                 </div>
-                <div class="box">
-                    <div class="image">
-                        <img src="images/product-2.jpg" alt="">
-                    </div>
-                    <div class="content">
-                        <h3>pan cakes</h3>
-                        <span class="price">$18.99</span>
-                        <a href="#" class="btn">add to cart</a>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="image">
-                        <img src="images/product-3.jpg" alt="">
-                    </div>
-                    <div class="content">
-                        <h3>corrasion</h3>
-                        <span class="price">$11.99</span>
-                        <a href="#" class="btn">add to cart</a>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="image">
-                        <img src="images/product-4.jpg" alt="">
-                    </div>
-                    <div class="content">
-                        <h3>donuts</h3>
-                        <span class="price">$15.99</span>
-                        <a href="#" class="btn">add to cart</a>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="image">
-                        <img src="images/product-5.png" alt="">
-                    </div>
-                    <div class="content">
-                        <h3>cupcakes</h3>
-                        <span class="price">$27.99</span>
-                        <a href="#" class="btn">add to cart</a>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="image">
-                        <img src="images/product-6.jpg" alt="">
-                    </div>
-                    <div class="content">
-                        <h3>bread</h3>
-                        <span class="price">$25.99</span>
-                        <a href="#" class="btn">add to cart</a>
-                    </div>
-                </div>
-                </div>
-        </section>
-        <!-- product end-->
-        <!-- parallax -->
-        <section class="parallax">
-            <h1 class="heading">range of <span>products</span></h1>
-            <div class="box-container">
-                <div class="box">
-                    <div class="image">
-                        <img src="images/parallax-1.png" alt="">
-                    </div>
-                    <div class="content">
-                        <h3>bread</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea minus laudantium placeat
-                            suscipit.
-                        </p>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="image">
-                        <img src="images/parallax-2.png" alt="">
-                    </div>
-                    <div class="content">
-                        <h3>cakes</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea minus laudantium placeat
-                            suscipit.
-                        </p>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="image">
-                        <img src="images/parallax-3.png" alt="">
-                    </div>
-                    <div class="content">
-                        <h3>donuts</h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea minus laudantium placeat
-                            suscipit.
-                        </p>
-                    </div>
+                <div class="about__content">
+                    <header class="section-header section-header--left reveal">
+                        <p class="section-eyebrow">Our Story</p>
+                        <h2 class="section-title" id="about-heading">A Bakery Built on Patience</h2>
+                    </header>
+                    <p class="about__text reveal">Maison Lev0n began when Elias Levon opened a small atelier in Lyon
+                        with
+                        one stone deck oven and a belief that bread deserves time. Today, we carry that same philosophy
+                        — no shortcuts, no preservatives, no frozen dough.</p>
+                    <p class="about__text reveal">Every loaf starts with flour milled within 120 miles. Our butter comes
+                        from heritage dairy farms. Fruit is picked at peak season. We bake in small batches so nothing
+                        sits on a shelf overnight.</p>
+                    <ul class="about__list reveal">
+                        <li>
+                            <strong>Farm-to-oven ingredients</strong>
+                            <span>Sourced locally, selected daily</span>
+                        </li>
+                        <li>
+                            <strong>Traditional recipes</strong>
+                            <span>European techniques, refined over decades</span>
+                        </li>
+                        <li>
+                            <strong>Quality without compromise</strong>
+                            <span>Limited quantities, maximum freshness</span>
+                        </li>
+                    </ul>
+                    <a href="#process" class="btn btn--secondary reveal">See Our Process</a>
                 </div>
             </div>
         </section>
-        <!-- parallax -->
-        <!-- review -->
-        <section class="review" id="review">
-            <h1 class="heading"> customer's <span>review</span> </h1>
-            <div class="box-container">
-                <div class="box">
-                    <img src="images/review-1.png" class="user" alt="">
-                    <h3>lacy deo</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt qui architecto fuga, voluptatum
-                        a
-                        deleniti nostrum rerum illum quidem cupiditate odio perspiciatis.</p>
-                </div>
-                <div class="box">
-                    <img src="images/review-3.png" class="user" alt="">
-                    <h3>lacy deo</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt qui architecto fuga, voluptatum
-                        a
-                        deleniti nostrum rerum illum quidem cupiditate odio perspiciatis.</p>
-                </div>
-                <div class="box">
-                    <img src="images/review-2.jpg" class="user" alt="">
-                    <h3>lacy deo</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt qui architecto fuga, voluptatum
-                        a
-                        deleniti nostrum rerum illum quidem cupiditate odio perspiciatis.</p>
+
+        <!-- Why Us -->
+        <section class="why section" id="why-us" aria-labelledby="why-heading">
+            <div class="container">
+                <header class="section-header reveal">
+                    <p class="section-eyebrow">The Maison Difference</p>
+                    <h2 class="section-title" id="why-heading">Why Customers Love Us</h2>
+                </header>
+                <div class="why-grid">
+                    <article class="why-card reveal">
+                        <div class="why-card__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 2C8 6 4 8 4 12c0 4.4 3.6 8 8 8s8-3.6 8-8c0-4-4-6-8-10z" />
+                                <path d="M12 12v4" />
+                            </svg>
+                        </div>
+                        <h3 class="why-card__title">Farm-to-Oven</h3>
+                        <p class="why-card__text">Flour, butter, and produce sourced within 120 miles — traceable,
+                            seasonal, and honest.</p>
+                    </article>
+                    <article class="why-card reveal">
+                        <div class="why-card__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="9" />
+                                <path d="M12 7v5l3 3" />
+                            </svg>
+                        </div>
+                        <h3 class="why-card__title">Baked Before Sunrise</h3>
+                        <p class="why-card__text">Our ovens fire at 4:30 AM. Pastries reach the counter warm, bread
+                            cools to perfection by opening.</p>
+                    </article>
+                    <article class="why-card reveal">
+                        <div class="why-card__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M8 12c0-2 2-4 5-4s5 2 5 4-2 4-5 4-5-2-5-4z" />
+                                <path d="M6 20c2-3 4-4 6-4s4 1 6 4" />
+                            </svg>
+                        </div>
+                        <h3 class="why-card__title">Hand-Shaped Daily</h3>
+                        <p class="why-card__text">Every croissant is laminated by hand. Every loaf is scored
+                            individually.
+                            No industrial lines.</p>
+                    </article>
+                    <article class="why-card reveal">
+                        <div class="why-card__icon" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 5.5-7 10-7 10z" />
+                            </svg>
+                        </div>
+                        <h3 class="why-card__title">A Neighborhood Institution</h3>
+                        <p class="why-card__text">Three generations of regulars, local cafés, and families who trust us
+                            with their mornings.</p>
+                    </article>
                 </div>
             </div>
         </section>
-        <!-- review -->
-        <!-- order -->
-        <section class="order" id="order">
-            <h1 class="heading"><span>order</span> now </h1>
-            <div class="row">
-                <div class="image">
-                    <img src="images/order.gif" alt="">
+
+        <!-- Collection -->
+        <section class="collection section section--alt" id="collection" aria-labelledby="collection-heading">
+            <div class="container">
+                <header class="section-header reveal">
+                    <p class="section-eyebrow">Signature Collection</p>
+                    <h2 class="section-title" id="collection-heading">Our Full Menu</h2>
+                    <p class="section-desc">Browse by category. All items baked fresh daily — availability may vary.</p>
+                </header>
+
+                <div class="filter-tabs reveal" role="tablist" aria-label="Product categories">
+                    <button type="button" class="filter-tab is-active" role="tab" aria-selected="true"
+                        data-filter="all">All</button>
+                    <button type="button" class="filter-tab" role="tab" aria-selected="false"
+                        data-filter="croissants">Croissants</button>
+                    <button type="button" class="filter-tab" role="tab" aria-selected="false"
+                        data-filter="bread">Artisan Bread</button>
+                    <button type="button" class="filter-tab" role="tab" aria-selected="false"
+                        data-filter="cakes">Cakes</button>
+                    <button type="button" class="filter-tab" role="tab" aria-selected="false"
+                        data-filter="donuts">Donuts</button>
+                    <button type="button" class="filter-tab" role="tab" aria-selected="false"
+                        data-filter="coffee">Coffee Pairings</button>
+                    <button type="button" class="filter-tab" role="tab" aria-selected="false"
+                        data-filter="seasonal">Seasonal</button>
                 </div>
-                <form action="">
-                    <div class="inputBox">
-                        <input type="text" placeholder="first name">
-                        <input type="text" placeholder="last name">
+
+                <div class="product-grid" id="product-grid">
+                    <article class="product-card reveal" data-category="croissants">
+                        <div class="product-card__image">
+                            <img src="images/croissant.jpg" alt="Classic butter croissant" width="500" height="400"
+                                loading="lazy">
+                        </div>
+                        <div class="product-card__body">
+                            <h3 class="product-card__title">Classic Butter Croissant</h3>
+                            <p class="product-card__desc">Twenty-seven layers, pure French butter.</p>
+                            <p class="product-card__price">$4.50</p>
+                        </div>
+                    </article>
+                    <article class="product-card reveal" data-category="croissants">
+                        <div class="product-card__image">
+                            <img src="images/pain-au-chocolat.jpg" alt="Pain au chocolat with dark chocolate"
+                                width="500" height="400" loading="lazy">
+                        </div>
+                        <div class="product-card__body">
+                            <h3 class="product-card__title">Pain au Chocolat</h3>
+                            <p class="product-card__desc">Dark chocolate batons in laminated pastry.</p>
+                            <p class="product-card__price">$5.25</p>
+                        </div>
+                    </article>
+                    <article class="product-card reveal" data-category="bread">
+                        <div class="product-card__image">
+                            <img src="images/sourdough.jpg" alt="Country sourdough loaf" width="500" height="400"
+                                loading="lazy">
+                        </div>
+                        <div class="product-card__body">
+                            <h3 class="product-card__title">Country Sourdough</h3>
+                            <p class="product-card__desc">48-hour fermentation, open crumb.</p>
+                            <p class="product-card__price">$8.00</p>
+                        </div>
+                    </article>
+                    <article class="product-card reveal" data-category="bread">
+                        <div class="product-card__image">
+                            <img src="images/sourdough.jpg" alt="Rustic baguette tradition" width="500" height="400"
+                                loading="lazy">
+                        </div>
+                        <div class="product-card__body">
+                            <h3 class="product-card__title">Baguette Tradition</h3>
+                            <p class="product-card__desc">Crisp crust, airy interior, three ingredients.</p>
+                            <p class="product-card__price">$3.75</p>
+                        </div>
+                    </article>
+                    <article class="product-card reveal" data-category="cakes">
+                        <div class="product-card__image">
+                            <img src="images/chocolate-cake.jpg" alt="Dark chocolate layer cake slice" width="500"
+                                height="400" loading="lazy">
+                        </div>
+                        <div class="product-card__body">
+                            <h3 class="product-card__title">Velvet Chocolate Cake</h3>
+                            <p class="product-card__desc">Valrhona ganache, single-origin cocoa.</p>
+                            <p class="product-card__price">$6.50</p>
+                        </div>
+                    </article>
+                    <article class="product-card reveal" data-category="cakes">
+                        <div class="product-card__image">
+                            <img src="images/berry-tart.jpg" alt="Fresh berry tart" width="500" height="400"
+                                loading="lazy">
+                        </div>
+                        <div class="product-card__body">
+                            <h3 class="product-card__title">Seasonal Berry Tart</h3>
+                            <p class="product-card__desc">Vanilla crème, glazed seasonal fruit.</p>
+                            <p class="product-card__price">$7.50</p>
+                        </div>
+                    </article>
+                    <article class="product-card reveal" data-category="donuts">
+                        <div class="product-card__image">
+                            <img src="images/berry-tart.jpg" alt="Glazed artisan donuts" width="500" height="400"
+                                loading="lazy">
+                        </div>
+                        <div class="product-card__body">
+                            <h3 class="product-card__title">Vanilla Bean Donut</h3>
+                            <p class="product-card__desc">Brioche dough, Madagascar glaze.</p>
+                            <p class="product-card__price">$3.95</p>
+                        </div>
+                    </article>
+                    <article class="product-card reveal" data-category="donuts">
+                        <div class="product-card__image">
+                            <img src="images/autumn-roll.jpg" alt="Cinnamon sugar donut" width="500" height="400"
+                                loading="lazy">
+                        </div>
+                        <div class="product-card__body">
+                            <h3 class="product-card__title">Cinnamon Sugar Ring</h3>
+                            <p class="product-card__desc">Warm spice, caramelized sugar crust.</p>
+                            <p class="product-card__price">$3.50</p>
+                        </div>
+                    </article>
+                    <article class="product-card reveal" data-category="coffee">
+                        <div class="product-card__image">
+                            <img src="images/coffee-pairing.jpg" alt="Latte with croissant pairing" width="500"
+                                height="400" loading="lazy">
+                        </div>
+                        <div class="product-card__body">
+                            <h3 class="product-card__title">Morning Pairing</h3>
+                            <p class="product-card__desc">Single-origin espresso + butter croissant.</p>
+                            <p class="product-card__price">$8.50</p>
+                        </div>
+                    </article>
+                    <article class="product-card reveal" data-category="coffee">
+                        <div class="product-card__image">
+                            <img src="images/pour-over.jpg" alt="Pour-over coffee setup" width="500" height="400"
+                                loading="lazy">
+                        </div>
+                        <div class="product-card__body">
+                            <h3 class="product-card__title">Pour-Over &amp; Pastry</h3>
+                            <p class="product-card__desc">Ethiopian beans, choice of viennoiserie.</p>
+                            <p class="product-card__price">$9.00</p>
+                        </div>
+                    </article>
+                    <article class="product-card reveal" data-category="seasonal">
+                        <div class="product-card__image">
+                            <img src="images/autumn-roll.jpg" alt="Pumpkin spice seasonal pastry" width="500"
+                                height="400" loading="lazy">
+                        </div>
+                        <div class="product-card__body">
+                            <span class="badge badge--seasonal">Seasonal</span>
+                            <h3 class="product-card__title">Autumn Spiced Roll</h3>
+                            <p class="product-card__desc">Pumpkin, warm spices, cream cheese frosting.</p>
+                            <p class="product-card__price">$5.75</p>
+                        </div>
+                    </article>
+                    <article class="product-card reveal" data-category="seasonal">
+                        <div class="product-card__image">
+                            <img src="images/hero.jpg" alt="Holiday stollen bread" width="500" height="400"
+                                loading="lazy">
+                        </div>
+                        <div class="product-card__body">
+                            <span class="badge badge--seasonal">Seasonal</span>
+                            <h3 class="product-card__title">Holiday Stollen</h3>
+                            <p class="product-card__desc">Marzipan, dried fruit, dusted with sugar.</p>
+                            <p class="product-card__price">$12.00</p>
+                        </div>
+                    </article>
+                </div>
+                <p class="collection-empty" id="collection-empty" hidden>No items in this category today. Please check
+                    another selection.</p>
+            </div>
+        </section>
+
+        <!-- Reviews -->
+        <section class="reviews section" id="reviews" aria-labelledby="reviews-heading">
+            <div class="container">
+                <header class="section-header reveal">
+                    <p class="section-eyebrow">Testimonials</p>
+                    <h2 class="section-title" id="reviews-heading">What Our Customers Say</h2>
+                </header>
+
+                <div class="slider reveal" id="testimonial-slider">
+                    <div class="slider__track" id="slider-track">
+                        <article class="slider__slide is-active" aria-hidden="false">
+                            <div class="review-card">
+                                <div class="review-card__stars" aria-label="5 out of 5 stars">
+                                    <span aria-hidden="true">★★★★★</span>
+                                </div>
+                                <blockquote class="review-card__quote">"The croissant layers are unreal — you can taste
+                                    the butter in every flake. I've tried bakeries across Europe and this rivals the
+                                    best in Paris."</blockquote>
+                                <footer class="review-card__author">
+                                    <strong>Sarah Mitchell</strong>
+                                    <span>Regular since 2019 · Downtown</span>
+                                </footer>
+                            </div>
+                        </article>
+                        <article class="slider__slide" aria-hidden="true">
+                            <div class="review-card">
+                                <div class="review-card__stars" aria-label="5 out of 5 stars">
+                                    <span aria-hidden="true">★★★★★</span>
+                                </div>
+                                <blockquote class="review-card__quote">"Their sourdough changed my mornings. Deep crust,
+                                    perfect tang, and it stays fresh for days. We order two loaves every Saturday
+                                    without fail."</blockquote>
+                                <footer class="review-card__author">
+                                    <strong>James Okonkwo</strong>
+                                    <span>Local café owner · Partner since 2015</span>
+                                </footer>
+                            </div>
+                        </article>
+                        <article class="slider__slide" aria-hidden="true">
+                            <div class="review-card">
+                                <div class="review-card__stars" aria-label="5 out of 5 stars">
+                                    <span aria-hidden="true">★★★★★</span>
+                                </div>
+                                <blockquote class="review-card__quote">"The salted caramel éclair is dangerously good.
+                                    My
+                                    team orders a dozen every Friday. Maison Lev0n is the highlight of our week."
+                                </blockquote>
+                                <footer class="review-card__author">
+                                    <strong>Elena Vasquez</strong>
+                                    <span>Office catering client</span>
+                                </footer>
+                            </div>
+                        </article>
+                        <article class="slider__slide" aria-hidden="true">
+                            <div class="review-card">
+                                <div class="review-card__stars" aria-label="5 out of 5 stars">
+                                    <span aria-hidden="true">★★★★★</span>
+                                </div>
+                                <blockquote class="review-card__quote">"You can feel the care in every bite. No
+                                    preservatives, no shortcuts — just honest baking. This is what a neighborhood bakery
+                                    should be."</blockquote>
+                                <footer class="review-card__author">
+                                    <strong>Thomas Berg</strong>
+                                    <span>Food writer · City Magazine</span>
+                                </footer>
+                            </div>
+                        </article>
+                        <article class="slider__slide" aria-hidden="true">
+                            <div class="review-card">
+                                <div class="review-card__stars" aria-label="5 out of 5 stars">
+                                    <span aria-hidden="true">★★★★★</span>
+                                </div>
+                                <blockquote class="review-card__quote">"We chose Maison Lev0n for our wedding dessert
+                                    table. The berry tarts and mini éclairs disappeared in minutes. Guests still ask
+                                    about them."</blockquote>
+                                <footer class="review-card__author">
+                                    <strong>Amira &amp; David Chen</strong>
+                                    <span>Wedding clients · June 2025</span>
+                                </footer>
+                            </div>
+                        </article>
+                        <article class="slider__slide" aria-hidden="true">
+                            <div class="review-card">
+                                <div class="review-card__stars" aria-label="5 out of 5 stars">
+                                    <span aria-hidden="true">★★★★★</span>
+                                </div>
+                                <blockquote class="review-card__quote">"I'm gluten-sensitive and their rye loaf is the
+                                    only bread I trust. Knowledgeable staff, warm atmosphere, and pastries that actually
+                                    taste homemade."</blockquote>
+                                <footer class="review-card__author">
+                                    <strong>Rachel Kim</strong>
+                                    <span>Weekly visitor · West End</span>
+                                </footer>
+                            </div>
+                        </article>
                     </div>
-                    <div class="inputBox">
-                        <input type="email" placeholder="email address">
-                        <input type="phone" placeholder="phone number">
+                    <div class="slider__controls">
+                        <button type="button" class="slider__btn" id="slider-prev"
+                            aria-label="Previous testimonial">←</button>
+                        <div class="slider__dots" id="slider-dots" role="tablist" aria-label="Testimonial slides"></div>
+                        <button type="button" class="slider__btn" id="slider-next"
+                            aria-label="Next testimonial">→</button>
                     </div>
-                    <div class="inputBox">
-                        <input type="text" placeholder="food name">
-                        <input type="number" placeholder="how much">
+                </div>
+            </div>
+        </section>
+
+        <!-- Process -->
+        <section class="process section section--alt" id="process" aria-labelledby="process-heading">
+            <div class="container">
+                <header class="section-header reveal">
+                    <p class="section-eyebrow">Daily Fresh Process</p>
+                    <h2 class="section-title" id="process-heading">From Grain to Counter</h2>
+                    <p class="section-desc">Four steps we never skip — the reason every bite tastes the way it should.
+                    </p>
+                </header>
+                <ol class="timeline reveal">
+                    <li class="timeline__step">
+                        <span class="timeline__number">01</span>
+                        <div class="timeline__content">
+                            <h3 class="timeline__title">Select Ingredients</h3>
+                            <p class="timeline__text">Flour milled weekly, butter from heritage dairy, fruit at peak
+                                ripeness. We reject anything that doesn't meet our standard.</p>
+                        </div>
+                    </li>
+                    <li class="timeline__step">
+                        <span class="timeline__number">02</span>
+                        <div class="timeline__content">
+                            <h3 class="timeline__title">Prepare Dough</h3>
+                            <p class="timeline__text">Natural starters rest 12 to 48 hours. Croissant dough is laminated
+                                by hand — fold by fold, layer by layer.</p>
+                        </div>
+                    </li>
+                    <li class="timeline__step">
+                        <span class="timeline__number">03</span>
+                        <div class="timeline__content">
+                            <h3 class="timeline__title">Handcrafted Baking</h3>
+                            <p class="timeline__text">Stone deck ovens, rotated manually. Every loaf scored
+                                individually.
+                                Timing guided by experience, not timers alone.</p>
+                        </div>
+                    </li>
+                    <li class="timeline__step">
+                        <span class="timeline__number">04</span>
+                        <div class="timeline__content">
+                            <h3 class="timeline__title">Fresh Daily Delivery</h3>
+                            <p class="timeline__text">On the counter by 7 AM. Local cafés and catering partners receive
+                                deliveries before 8 — never yesterday's bake.</p>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Order -->
+        <section class="order section" id="order" aria-labelledby="order-heading">
+            <div class="container order__grid">
+                <div class="order__intro reveal">
+                    <header class="section-header section-header--left">
+                        <p class="section-eyebrow">Pickup &amp; Reservation</p>
+                        <h2 class="section-title" id="order-heading">Reserve Your Order</h2>
+                    </header>
+                    <p class="order__text">Popular items sell out by noon. Reserve ahead and we'll have your selection
+                        ready at the counter — no waiting, no disappointment.</p>
+                    <ul class="order__perks">
+                        <li>Same-day pickup available before 2 PM</li>
+                        <li>Catering orders welcome with 48-hour notice</li>
+                        <li>Confirmation sent to your email</li>
+                    </ul>
+                </div>
+                <form class="order-form reveal" id="order-form" novalidate>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="first-name">First Name</label>
+                            <input type="text" id="first-name" name="firstName" autocomplete="given-name" required
+                                minlength="2" placeholder="Elena">
+                            <span class="form-error" id="first-name-error" role="alert"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" id="last-name" name="lastName" autocomplete="family-name" required
+                                minlength="2" placeholder="Levon">
+                            <span class="form-error" id="last-name-error" role="alert"></span>
+                        </div>
                     </div>
-                    <textarea placeholder="your address" name="" id="" cols="30" rows="10"></textarea>
-                    <input type="submit" value="order now" class="btn">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" autocomplete="email" required
+                                placeholder="you@example.com">
+                            <span class="form-error" id="email-error" role="alert"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" autocomplete="tel" required
+                                placeholder="+1 (555) 000-0000">
+                            <span class="form-error" id="phone-error" role="alert"></span>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="pickup-date">Pickup Date</label>
+                            <input type="date" id="pickup-date" name="pickupDate" required>
+                            <span class="form-error" id="pickup-date-error" role="alert"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="pickup-time">Time Slot</label>
+                            <select id="pickup-time" name="pickupTime" required>
+                                <option value="">Select a time</option>
+                                <option value="07:00">7:00 AM</option>
+                                <option value="08:00">8:00 AM</option>
+                                <option value="09:00">9:00 AM</option>
+                                <option value="10:00">10:00 AM</option>
+                                <option value="11:00">11:00 AM</option>
+                                <option value="12:00">12:00 PM</option>
+                                <option value="13:00">1:00 PM</option>
+                            </select>
+                            <span class="form-error" id="pickup-time-error" role="alert"></span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="items">What would you like to order?</label>
+                        <textarea id="items" name="items" rows="3" required minlength="5"
+                            placeholder="e.g. 4 croissants, 1 sourdough loaf, 2 éclairs"></textarea>
+                        <span class="form-error" id="items-error" role="alert"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="notes">Special Notes <span class="form-optional">(optional)</span></label>
+                        <textarea id="notes" name="notes" rows="2"
+                            placeholder="Allergies, gift wrapping, etc."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full">Confirm Reservation</button>
+                    <div class="form-success" id="form-success" hidden role="status">
+                        <strong>Reservation received!</strong>
+                        <p>Thank you — we'll have your order ready at the counter. A confirmation has been sent to your
+                            email.</p>
+                    </div>
                 </form>
             </div>
         </section>
-        <!-- order end -->
+
+        <!-- Contact -->
+        <section class="contact section section--alt" id="contact" aria-labelledby="contact-heading">
+            <div class="container">
+                <header class="section-header reveal">
+                    <p class="section-eyebrow">Visit Us</p>
+                    <h2 class="section-title" id="contact-heading">Find Maison Lev0n</h2>
+                </header>
+                <div class="contact-grid reveal">
+                    <div class="contact-card">
+                        <h3 class="contact-card__title">Address</h3>
+                        <address class="contact-card__text">
+                            42 Rue des Artisans<br>
+                            Quartier Central, 69001
+                        </address>
+                    </div>
+                    <div class="contact-card">
+                        <h3 class="contact-card__title">Hours</h3>
+                        <p class="contact-card__text">
+                            Monday – Friday: 6:00 AM – 8:00 PM<br>
+                            Saturday – Sunday: 7:00 AM – 9:00 PM
+                        </p>
+                    </div>
+                    <div class="contact-card">
+                        <h3 class="contact-card__title">Contact</h3>
+                        <p class="contact-card__text">
+                            <a href="tel:+967773069358">+967 773 069 358</a><br>
+                            <a href="mailto:hello@maisonlev0n.com">hello@maisonlev0n.com</a>
+                        </p>
+                    </div>
+                    <div class="contact-card">
+                        <h3 class="contact-card__title">Directions</h3>
+                        <p class="contact-card__text">
+                            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer">Open in Google
+                                Maps →</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Study -->
+        <section class="case-study section" id="case-study" aria-labelledby="case-study-heading">
+            <div class="container">
+                <header class="section-header reveal">
+                    <p class="section-eyebrow">Portfolio · Frontend Engineering</p>
+                    <h2 class="section-title" id="case-study-heading">Project Transformation</h2>
+                    <p class="section-desc">From educational template to premium brand experience — a frontend case
+                        study.
+                    </p>
+                </header>
+                <div class="case-study-grid">
+                    <article class="case-study-block reveal">
+                        <h3 class="case-study-block__title">Original State</h3>
+                        <p>A single-page HTML/CSS tutorial with Lorem ipsum copy, generic product cards, broken mobile
+                            navigation, missing assets, and no JavaScript functionality.</p>
+                    </article>
+                    <article class="case-study-block reveal">
+                        <h3 class="case-study-block__title">Problems Found</h3>
+                        <ul>
+                            <li>Non-functional mobile menu and order form</li>
+                            <li>No brand identity or believable content</li>
+                            <li>Font/CSS inconsistencies and accessibility gaps</li>
+                            <li>Template-era parallax layout with weak visual hierarchy</li>
+                        </ul>
+                    </article>
+                    <article class="case-study-block reveal">
+                        <h3 class="case-study-block__title">Improvements Implemented</h3>
+                        <ul>
+                            <li>Full rebrand as Maison Lev0n with editorial layout system</li>
+                            <li>10 content sections + modular vanilla JavaScript</li>
+                            <li>Product filtering, testimonial slider, form validation</li>
+                            <li>SEO meta, Open Graph, JSON-LD, and WCAG-focused markup</li>
+                        </ul>
+                    </article>
+                    <article class="case-study-block reveal">
+                        <h3 class="case-study-block__title">Engineering Decisions</h3>
+                        <ul>
+                            <li>Vanilla JS modules — zero dependencies, fast load</li>
+                            <li>CSS custom properties for scalable design tokens</li>
+                            <li>Intersection Observer for scroll reveals and nav state</li>
+                            <li>Semantic HTML with progressive enhancement</li>
+                        </ul>
+                    </article>
+                    <article class="case-study-block case-study-block--wide reveal">
+                        <h3 class="case-study-block__title">What I Learned</h3>
+                        <p>Premium frontend work is product design, not decoration. Restraint in animation, intentional
+                            typography, and honest content create trust. Building accessible, performant interfaces
+                            without frameworks demonstrates engineering maturity — and that's what recruiters look for
+                            in portfolio projects.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- footer -->
-
-    <section class="footer">
-
-        <div class="box-container">
-
-            <div class="box">
-                <h3>address</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Alias sit debitis.</p>
-
+    <footer class="site-footer">
+        <div class="container site-footer__grid">
+            <div class="site-footer__brand">
+                <a href="#hero" class="site-logo site-logo--footer">
+                    <span class="site-logo__mark" aria-hidden="true">ML</span>
+                    <span class="site-logo__text">Maison Lev<span class="site-logo__accent">0</span>n</span>
+                </a>
+                <p class="site-footer__tagline">Crafted with tradition. Served with passion.</p>
             </div>
-
-            <div class="box">
-                <h3>E-mail</h3>
-                <a href="www.gmail.com" class="link">Bakery@gmail.com</a>
-                <a href="www.gmail.com" class="link">BBK@gmail.com</a>
+            <nav class="site-footer__nav" aria-label="Footer navigation">
+                <h4 class="site-footer__heading">Explore</h4>
+                <ul>
+                    <li><a href="#featured">Menu</a></li>
+                    <li><a href="#about">Our Story</a></li>
+                    <li><a href="#collection">Collection</a></li>
+                    <li><a href="#process">Process</a></li>
+                </ul>
+            </nav>
+            <nav class="site-footer__nav" aria-label="Footer support links">
+                <h4 class="site-footer__heading">Connect</h4>
+                <ul>
+                    <li><a href="#order">Order</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#case-study">Case Study</a></li>
+                    <li><a href="https://github.com/AhmedAlMadhji" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="site-footer__contact">
+                <h4 class="site-footer__heading">Hours</h4>
+                <p>Mon–Fri: 6 AM – 8 PM<br>Sat–Sun: 7 AM – 9 PM</p>
             </div>
-
-            <div class="box">
-                <h3>call us</h3>
-                <p>+967 773 069 358 </p>
-                <p>+967 771 391 719 </p>
-            </div>
-
-            <div class="box">
-                <h3> opening hours</h3>
-                <p>Monday - Friday: 9:00 - 23:00 <br> Saturday: 8:00 - 24:00 </p>
-            </div>
-
         </div>
+        <div class="site-footer__bottom">
+            <div class="container">
+                <p>&copy; 2026 Maison Lev0n. All rights reserved. Built by <a href="https://github.com/AhmedAlMadhji"
+                        target="_blank" rel="noopener noreferrer">Ahmed
+                        Al-Madhji</a>.</p>
+            </div>
+        </div>
+    </footer>
 
-        <div class="credit">created by <a href="https://github.com/AhmedAlMadhji" target="_blank"><span>Abo Night</span></a> all rights reserved! </div>
-
-    </section>
-    <!-- footer ends -->
+    <script type="module" src="js/main.js"></script>
 </body>
 
 </html>
