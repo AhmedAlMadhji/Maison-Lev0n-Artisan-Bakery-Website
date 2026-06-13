@@ -73,6 +73,7 @@
   right: 0;
   z-index: 1000;
   height: var(--header-height);
+  overflow: visible;
   background: linear-gradient(
     to bottom,
     rgba(20, 10, 6, 0.82) 0%,
@@ -82,10 +83,24 @@
   transition: background var(--transition), box-shadow var(--transition);
 }
 
-.site-header.is-scrolled {
-  background: rgba(250, 247, 242, 0.97);
-  backdrop-filter: blur(12px);
+.site-header.is-scrolled,
+.site-header.menu-is-open {
+  background: rgba(250, 247, 242, 0.98);
   box-shadow: var(--shadow-sm);
+}
+
+.site-header.menu-is-open:not(.is-scrolled) .site-logo__text {
+  color: var(--color-espresso);
+  text-shadow: none;
+}
+
+.site-header.menu-is-open:not(.is-scrolled) .site-logo__accent {
+  color: var(--color-caramel);
+}
+
+.site-header.menu-is-open:not(.is-scrolled) .menu-toggle__bar {
+  background: var(--color-espresso);
+  box-shadow: none;
 }
 
 /* Light header over hero */
@@ -224,6 +239,8 @@
   width: 3.2rem;
   height: 3.2rem;
   padding: 0.4rem;
+  position: relative;
+  z-index: 1002;
 }
 
 .menu-toggle__bar {
@@ -256,28 +273,44 @@
     top: var(--header-height);
     left: 0;
     right: 0;
-    bottom: 0;
+    width: 100%;
+    height: calc(100dvh - var(--header-height));
+    max-height: calc(100dvh - var(--header-height));
     background: var(--color-cream);
-    padding: var(--space-4);
+    padding: var(--space-4) var(--container-padding);
     transform: translateX(100%);
     transition: transform var(--transition);
     overflow-y: auto;
+    overscroll-behavior: contain;
+    z-index: 1001;
+    visibility: hidden;
+    pointer-events: none;
   }
 
   .site-nav.is-open {
     transform: translateX(0);
+    visibility: visible;
+    pointer-events: auto;
   }
 
   .site-nav__list {
     flex-direction: column;
     align-items: flex-start;
     gap: var(--space-3);
+    width: 100%;
+  }
+
+  .site-nav__list li {
+    width: 100%;
   }
 
   .site-nav__link {
+    display: block;
+    width: 100%;
     font-size: var(--text-lg);
     color: var(--color-walnut);
     text-shadow: none;
+    padding: 0.4rem 0;
   }
 
   .site-nav__link:hover,
@@ -286,8 +319,18 @@
   }
 
   .site-nav__link--cta {
-    margin-top: var(--space-2);
+    display: block;
+    width: 100%;
+    margin-top: var(--space-3);
+    padding: 1.4rem 2rem;
+    text-align: center;
     color: var(--color-white) !important;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .site-nav__link--cta:hover {
+    background: var(--color-terracotta-hover);
   }
 }
 

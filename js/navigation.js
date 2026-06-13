@@ -9,6 +9,7 @@ export function initNavigation() {
 
   function closeMenu() {
     nav.classList.remove("is-open");
+    header.classList.remove("menu-is-open");
     toggle.setAttribute("aria-expanded", "false");
     toggle.setAttribute("aria-label", "Open navigation menu");
     document.body.classList.remove("menu-open");
@@ -16,6 +17,7 @@ export function initNavigation() {
 
   function openMenu() {
     nav.classList.add("is-open");
+    header.classList.add("menu-is-open");
     toggle.setAttribute("aria-expanded", "true");
     toggle.setAttribute("aria-label", "Close navigation menu");
     document.body.classList.add("menu-open");
