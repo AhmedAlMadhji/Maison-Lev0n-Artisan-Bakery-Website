@@ -146,7 +146,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: var(--space-2);
   height: 100%;
+}
+
+.site-nav {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .site-logo {
@@ -184,7 +192,20 @@
 .site-nav__list {
   display: flex;
   align-items: center;
-  gap: var(--space-3);
+  gap: var(--space-2);
+  flex-wrap: nowrap;
+}
+
+@media (min-width: 901px) {
+  .site-nav__list {
+    gap: var(--space-3);
+  }
+
+  .site-nav__link--cta {
+    padding: 0.9rem 1.8rem;
+    line-height: 1;
+    white-space: nowrap;
+  }
 }
 
 .site-nav__link {
@@ -266,16 +287,21 @@
 @media (max-width: 900px) {
   .menu-toggle {
     display: flex;
+    flex-shrink: 0;
+  }
+
+  .site-header__inner {
+    position: relative;
+    z-index: 1002;
   }
 
   .site-nav {
     position: fixed;
-    top: var(--header-height);
-    left: 0;
-    right: 0;
+    inset: var(--header-height) 0 0 0;
+    flex: none;
     width: 100%;
-    height: calc(100dvh - var(--header-height));
-    max-height: calc(100dvh - var(--header-height));
+    height: auto;
+    max-height: none;
     background: var(--color-cream);
     padding: var(--space-4) var(--container-padding);
     transform: translateX(100%);
